@@ -309,6 +309,7 @@ Client.prototype.getTransport = function getTransport(cb) {
 		});
 
 		transport.once("connect", function () {
+			me.emit('connect');
 			transport.setTimeout(0);
 		});
 
